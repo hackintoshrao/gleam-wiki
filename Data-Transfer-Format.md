@@ -12,7 +12,6 @@ When reading the final output from the flow, you can use dataset.Output() functi
 
 The []byte corresponds to the Message.data part, which is a row of MsgPack encoded fields. To decode the data, see this example:
 ```
-// word_count.go
 package main
 
 import (
