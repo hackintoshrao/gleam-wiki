@@ -1,6 +1,8 @@
 Output() returns a channel of encoded []byte back to the driver program.
 SaveTextTo() is a convenient method, and actually is also an example to read from the channel.
 
+Same as Source() functions, Output() functions are run as part of the driver program in a distributed environment. They are usually written in Go.
+
 # Output()
 Output() returns a channel of []byte. The []byte is a row of fields encoded in MsgPack format.
 
