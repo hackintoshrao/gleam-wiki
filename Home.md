@@ -4,6 +4,7 @@ Welcome to the Gleam wiki!
 * [[Gleam data transfer format | data transfer format]]
 
 # Gleam APIs
+* [[Source() TextFile() Lines() Slice() Channel() | Source ]]
 * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
 * [[Partition() | Partition ]]
 * [[Map() ForEach() FlatMap() Filter() | Map]]
