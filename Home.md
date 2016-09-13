@@ -4,5 +4,5 @@ Welcome to the Gleam wiki!
 * [[Gleam data transfer format | data transfer format]]
 
 # Glow APIs
-* [[Pipe() | Pipe]]
-* [[PipeArgs() | PipeArgs]]
+* [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
+* [[Partition() | Partition ]]
