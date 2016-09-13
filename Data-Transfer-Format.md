@@ -1,10 +1,10 @@
 The actual Messages flowing over the wire is in this format.
-
+```
 Message{
   size int32
   data []byte
 }
-
+```
 The "data" is conceptually a row of fields, with each field encoded in MsgPack format.
 
 # Reading from Channels
