@@ -14,4 +14,4 @@ Welcome to the Gleam wiki!
 * [[Output() SaveTextTo() | Output]]
 
 # Examples
-* [[Joined Word Count | Joined-Word-Count]] Used APIs: Join(), Script(), Pipe(), SaveTextTo()
+* [[Joined Word Count | Joined-Word-Count]] APIs: Join(), Script(), Pipe(), SaveTextTo()
