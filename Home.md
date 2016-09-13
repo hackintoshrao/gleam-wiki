@@ -6,7 +6,8 @@ Welcome to the Gleam wiki!
 # Gleam APIs
 * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
 * [[Partition() | Partition ]]
-* [[Map() ForEach() FlatMap() Filter() | map]]
-* [[Reduce() | reduce]]
-* [[Sort() | sort]]
+* [[Map() ForEach() FlatMap() Filter() | Map]]
+* [[Reduce() | Reduce]]
+* [[Sort() | Sort]]
+* [[Join() CoGroup() | Join-And-CoGroup]]
 
