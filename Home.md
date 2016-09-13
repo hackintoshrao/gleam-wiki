@@ -6,4 +6,5 @@ Welcome to the Gleam wiki!
 # Glow APIs
 * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
 * [[Partition() | Partition ]]
+* [[Map() ForEach() FlatMap() Filter() | map]]
 * [[Sort() | sort]]
