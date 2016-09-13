@@ -58,5 +58,5 @@ func main() {
 
 Unix Pipe has a powerful toolset. But usually they operate just on a line of text. How to pass multiple variables to the next operation?
 
-Gleam treat each line as one row of fields, and fields are separated by tab.
+The process in Pipe() should output a row of variables separated by tabs, and separate each line by "\n".
 
