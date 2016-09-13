@@ -1,5 +1,5 @@
 This example uses Script() to register several named functions first. The "splitter" and "parseUniqDashC" are
-declared. This piece of Lua code will be actually just prepended when actually running the code. So it is a free format and you can put any code there.
+declared. This piece of Lua code will be prepended when running the code. So it is a free format and you can put any logic there.
 
 "parseUniqDashC" returns a row of (word, count).
 
