@@ -7,4 +7,6 @@ Welcome to the Gleam wiki!
 * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
 * [[Partition() | Partition ]]
 * [[Map() ForEach() FlatMap() Filter() | map]]
+* [[Reduce() | reduce]]
 * [[Sort() | sort]]
+
