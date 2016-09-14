@@ -1,5 +1,5 @@
 * Architecture
- * [[Gleam data transfer format | data transfer format]]
+ * [[data transfer format | data transfer format]]
 
 * Gleam APIs
  * [[Source() TextFile() Lines() Slice() Channel() | Source ]]
@@ -12,4 +12,4 @@
  * [[Output() SaveTextTo() | Output]]
 
 * Examples
- * [[Joined Word Count | Joined-Word-Count]] used APIs: Join(), Script(), Pipe(), SaveTextTo()
+ * [[Joined Word Count | Joined-Word-Count]]
