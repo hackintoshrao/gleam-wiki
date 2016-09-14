@@ -37,7 +37,7 @@ func (d *Dataset) SaveTextTo(writer io.Writer, format string) {
 ```
 
 # SaveFinalRowTo(decodedObjects ...interface{})
-If there are only one row of data in the output, the values will be set to provided objects.
+SaveFinalRowTo() is a convenient method. When there are only one row of data in the output, the values will be set to provided objects.
 ```
 var word string
 var count int
