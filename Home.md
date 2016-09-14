@@ -8,7 +8,7 @@ Welcome to the Gleam wiki!
 * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
 * [[Partition() | Partition ]]
 * [[Map() ForEach() FlatMap() Filter() | Map]]
-* [[Reduce() | Reduce]]
+* [[Reduce() ReduceByKey()| Reduce]]
 * [[Sort() | Sort]]
 * [[Join() CoGroup() | Join-And-CoGroup]]
 * [[Output() SaveTextTo() | Output]]
