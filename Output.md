@@ -1,5 +1,5 @@
 Output() returns a channel of encoded []byte back to the driver program.
-SaveTextTo() is a convenient method, and actually is also an example to read from the channel.
+Fprintf() is a convenient method, and actually is also an example to read from the channel.
 
 Same as Source() functions, Output() functions are run as part of the driver program in a distributed environment. They are usually written in Go.
 
@@ -13,12 +13,12 @@ To decode the encoded row,
   decodedObjects, err = util.DecodeRow(encodedBytes)
 ```
 
-# SaveTextTo(writer io.Writer, format string)
+# Fprintf(writer io.Writer, format string)
 
-SaveTextTo() will get the channel returned from Output(), start the flow, and read out the row. The simplified code is:
+Fprintf() will get the channel returned from Output(), start the flow, and print out the rows. The simplified code is:
 ```
 
-func (d *Dataset) SaveTextTo(writer io.Writer, format string) {
+func (d *Dataset) Fprintf(writer io.Writer, format string) {
 	inChan := d.Output()
 	var wg sync.WaitGroup
 	wg.Add(1)
@@ -27,7 +27,6 @@ func (d *Dataset) SaveTextTo(writer io.Writer, format string) {
 		for encodedBytes := range inChan {
 			decodedObjects, _ := util.DecodeRow(encodedBytes)
 			fmt.Fprintf(writer, format, decodedObjects...)
-			writer.Write([]byte("\n"))
 		}
 	}()
 	wg.Add(1)

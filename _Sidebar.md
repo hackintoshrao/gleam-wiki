@@ -9,7 +9,7 @@
  * [[Reduce() ReduceByKey()| Reduce]]
  * [[Sort() | Sort]]
  * [[Join() CoGroup() | Join-And-CoGroup]]
- * [[Output() SaveTextTo() | Output]]
+ * [[Output() Fprintf() | Output]]
 
 * Examples
  * [[Joined Word Count | Joined-Word-Count]]

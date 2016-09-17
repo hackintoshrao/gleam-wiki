@@ -37,7 +37,7 @@ func main() {
       function (word, leftCount, rightCount)
 	    return word, leftCount, rightCount, leftCount + rightCount
       end
-	`).SaveTextTo(os.Stdout, "%s\t%d + %d = %d")
+	`).Fprintf(os.Stdout, "%s\t%d + %d = %d\n")
 
 }
 
