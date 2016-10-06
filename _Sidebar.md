@@ -1,5 +1,5 @@
 * Architecture
- * [[data transfer format | data transfer format]]
+ * [[Why Gleam? | why gleam]]
 
 * Gleam APIs
  * [[Source() TextFile() Lines() Slice() Channel() | Source ]]
