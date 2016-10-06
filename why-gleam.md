@@ -18,15 +18,8 @@ Gleam's Pipe() function is basically the same as Unix's pipeline. In additional 
 # Compared to Spark
 Spark is a popular system.
 
-## No more JVM memory tuning
-JVM tuning is a big headache. Enough said...
-
-## No more JVM systems setup
-Spark needs a whole set of eco system.
-
-## Fast to setup and run.
-Gleam agents and Gleam master are very simple and very fast to setup.
-
-## Dynamically switch between Local mode, distributed in memory piping mode, or distributed disk-based RDD mode.
-
-## Back Pressure
+* No more JVM memory tuning. JVM tuning is a big headache. Enough said...
+* No more systems setup. Spark needs a whole set of eco system.
+* Fast to setup and run. Gleam agents and Gleam master are very simple and very fast to setup.
+* Dynamically switch between Local mode, distributed in memory piping mode, or distributed disk-based RDD mode.
+* Back Pressure
