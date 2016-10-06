@@ -15,3 +15,18 @@ Go's concurrent programming support easily enables parallel execution for the sc
 ## Pipe Execution for any language
 Gleam's Pipe() function is basically the same as Unix's pipeline. In additional to all basic unix tools, you can use anything written in Python/Ruby/Shell/Java/C/C++, or mix them together, to do distributed computing.
 
+# Compared to Spark
+Spark is a popular system.
+
+## No more JVM memory tuning
+JVM tuning is a big headache. Enough said...
+
+## No more JVM systems setup
+Spark needs a whole set of eco system.
+
+## Fast to setup and run.
+Gleam agents and Gleam master are very simple and very fast to setup.
+
+## Dynamically switch between Local mode, distributed in memory piping mode, or distributed disk-based RDD mode.
+
+## Back Pressure
