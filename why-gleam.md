@@ -16,10 +16,11 @@ Go's concurrent programming support easily enables parallel execution for the sc
 Gleam's Pipe() function is basically the same as Unix's pipeline. In additional to all basic unix tools, you can use anything written in Python/Ruby/Shell/Java/C/C++, or mix them together, to do distributed computing.
 
 # Compared to Spark
-Spark is a popular system.
+Spark is a popular system. Gleam has more similarity than difference with Spark. However, Gleam has its advantages.
 
-* No more JVM memory tuning. JVM tuning is a big headache. Enough said...
-* No more systems setup. Spark needs a whole set of hadoop eco system.
 * Fast to setup and run. Gleam agents and Gleam master are very simple and very fast to setup.
 * Dynamically switch between Local mode, distributed in memory piping mode, or distributed disk-based RDD mode.
 * Back Pressure
+* Memory Efficient. One server can host much more executors.
+* OS managed memory in separated OS process. No more JVM memory tuning.
+* No more systems setup. Spark needs a whole set of hadoop eco system.
