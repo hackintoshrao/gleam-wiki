@@ -2,7 +2,7 @@ Sort will sort rows by the key, or the row value if there are no key.
 
 # How sorting is done?
 
-The actual code for Sort() is:
+The pseudo code for Sort() is:
 ```
 func (d *Dataset) Sort() *Dataset {
 	return d.LocalSort().MergeSortedTo(1)

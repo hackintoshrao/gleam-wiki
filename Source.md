@@ -3,6 +3,9 @@ Source() TextFile() Lines() Slice() Channel() are functions to generate initial 
 They are run as part of the driver program in a distributed environment, and can not be sent over the wire.
 So they are usually written in Go.
 
+# Listen(network, address string)
+Listen() receives textual input via a socket.
+
 # Source(f func(chan []byte))
 Source() receives a function that can generate data and send to the chan[]byte.
 

@@ -15,30 +15,12 @@ To decode the encoded row,
 
 # Fprintf(writer io.Writer, format string)
 
-Fprintf() will get the channel returned from Output(), start the flow, and print out the rows. The simplified code is:
-```
+Fprintf() will get the data returned from Output(), and printed to the writer via given format.
 
-func (d *Dataset) Fprintf(writer io.Writer, format string) {
-	inChan := d.Output()
-	var wg sync.WaitGroup
-	wg.Add(1)
-	go func() {
-		defer wg.Done()
-		for encodedBytes := range inChan {
-			decodedObjects, _ := util.DecodeRow(encodedBytes)
-			fmt.Fprintf(writer, format, decodedObjects...)
-		}
-	}()
-	wg.Add(1)
-	RunFlowContext(&wg, d.FlowContext)
-	wg.Wait()
-}
-```
-
-# SaveFinalRowTo(decodedObjects ...interface{})
-SaveFinalRowTo() is a convenient method. When there are only one row of data in the output, the values will be set to provided objects.
+# SaveFirstRowTo(decodedObjects ...interface{})
+SaveFirstRowTo() is a convenient method. When there are only one row of data in the output, the values will be set to provided objects.
 ```
 var word string
 var count int
-flow.New().....SaveFinalRowTo(&word, &count)
+flow.New().....SaveFirstRowTo(&word, &count).Run()
 ```

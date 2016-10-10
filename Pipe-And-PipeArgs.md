@@ -12,16 +12,16 @@ When a tuple is passed in to Pipe(), the tuple is converted to tab-separated fie
 
 When Pipe() need to output a tuple, the tuple should be converted to tab-separated fields also.
 
-# PipeArgs()
+# PipeAsArgs()
 
 A typical use case is that we need to process a list of file names. For example, we need to use the files content
 as input to the next dataset.
 
 ```
   fileNames := []string{"1.txt", "2.txt", "3.txt"}
-  flow.New().Lines(fileNames).PipeArgs("cat $1").Map(...).Reduce(...)...
+  flow.New().Lines(fileNames).PipeAsArgs("cat $1").Map(...).Reduce(...)...
   gzippedFileNames = []string{"1.txt.gz", "2.txt.gz", "3.txt.gz"}
-  flow.New().Lines(gzippedFileNames).PipeArgs("zcat $1").Map(...).Reduce(...)...
+  flow.New().Lines(gzippedFileNames).PipeAsArgs("zcat $1").Map(...).Reduce(...)...
 ```
 
 
