@@ -2,14 +2,15 @@
  * [[Why Gleam? | why gleam]]
 
 * Gleam APIs
- * [[Source() TextFile() Lines() Slice() Channel() | Source ]]
+ * [[Source() Listen() TextFile() Channel() Strings() Bytes() Ints() | Source ]]
  * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
  * [[Partition() | Partition ]]
  * [[Map() ForEach() FlatMap() Filter() | Map]]
- * [[Reduce() ReduceByKey()| Reduce]]
+ * [[Reduce() ReduceBy()| Reduce]]
  * [[Sort() | Sort]]
- * [[Join() CoGroup() | Join-And-CoGroup]]
+ * [[Join() CoGroup() Group()| Join-And-CoGroup]]
  * [[Output() Fprintf() | Output]]
 
 * Examples
  * [[Joined Word Count | Joined-Word-Count]]
+ * [[TF-IDF | TF-IDF]]
