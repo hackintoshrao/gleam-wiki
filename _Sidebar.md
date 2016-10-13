@@ -8,7 +8,7 @@
  * [[Map() ForEach() FlatMap() Filter() | Map]]
  * [[Reduce() ReduceBy()| Reduce]]
  * [[Sort() | Sort]]
- * [[Join() CoGroup() Group()| Join-And-CoGroup]]
+ * [[Join() CoGroup() GroupBy()| Join-And-CoGroup]]
  * [[Output() Fprintf() | Output]]
 
 * Examples
