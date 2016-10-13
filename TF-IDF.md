@@ -1,7 +1,10 @@
+TF-IDF calculation is 
+
 ```
 package main
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -21,14 +24,14 @@ func main() {
 	})
 
 	f := gleam.New()
-	word2doc := f.Strings(fileNames).Map(`
+	word2doc := f.Strings(fileNames).Partition(7).Map(`
         function(fileName)
             local f = io.open(fileName, "rb")
             local content = f:read("*all")
             f:close()
             return content, fileName
         end
-    `).Partition(7).Map(`
+    `).Map(`
         function(content, docId)
             for word in string.gmatch(content, "%w+") do
                 writeRow(word, docId, 1)
@@ -52,14 +55,15 @@ func main() {
         end
     `)
 
-	docFreq.Join(termFreq).Map(`
+	docFreq.Join(termFreq).Map(fmt.Sprintf(`
         function(word, df, docId, tf)
-            return word, docId, tf, df, tf/df
+            return word, docId, tf, df, tf*%d/df
         end
-    `).Fprintf(os.Stdout, "%s: %s tf=%d df=%d tf-idf=%v\n")
+    `, len(fileNames))).Sort(5).Fprintf(os.Stdout, "%s: %s tf=%d df=%d tf-idf=%v\n")
 
 	f.Run()
 
 }
+
 
 ```

@@ -12,16 +12,7 @@ func (d *Dataset) Sort() *Dataset {
 It will try to sort on each partition locally, and then merge the sorted list into one final partition.
 
 # Sort(indexes ...int)
-Same function as above. This can selectively choose to sort on which field, or fields. The fields will be moved to the front.
-
-```
-  before:
-     key1, value1, key2, value2
-  operation:
-     Sort(1,3)
-  after:
-     key1, key2, value1, value2
-```
+Same function as above. This can selectively choose to sort on which field, or fields. The fields ordering will stay the same.
 
 # Caveat
 
