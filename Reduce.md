@@ -12,19 +12,27 @@ func (d *Dataset) Reduce(code string) (ret *Dataset) {
 
 It will LocalReduce() on each partition. Then MergeSortedTo() on all the locally reduced partitions, to merge into one partition, and then LocalReduce() on the final partition.
 
-# How ReduceByKey() works?
+# How ReduceBy() works?
 
-The pseudo code code for ReduceByKey() function is:
+The pseudo code code for ReduceBy() function is:
 ```
-func (d *Dataset) ReduceByKey(code string) (ret *Dataset) {
-	return d.LocalSort().LocalReduceByKey(code).MergeSortedTo(1).LocalReduceByKey(code)
+func (d *Dataset) ReduceBy(code string) (ret *Dataset) {
+	return d.LocalSort().LocalReduceBy(code).MergeSortedTo(1).LocalReduceBy(code)
 }
 ```
 
-It will LocalSort() on each partition, and LocalReduceByKey() on each partition. Then MergeSortedTo() on all the sorted and locally reduced partitions, to merge into one partition, and then LocalReduceByKey() on the final partition.
+It will LocalSort() on each partition, and LocalReduceBy() on each partition. Then MergeSortedTo() on all the sorted and locally reduced partitions, to merge into one partition, and then LocalReduceBy() on the final partition.
 
 
-# Possible Performance Improvements
-If all your data does not have lots of duplicated keys in each partition, the early LocalReduceByKey() may not help much. Theoretically you can optimize it a bit into ```d.LocalSort().MergeSortedTo(1).LocalReduceByKey(code)```
+# ReduceBy(code string, indexes ...int)
+Same function as above. This can selectively choose to reduce on which field, or fields. The fields will be moved to the front.
 
-Do not always use the Reduce() or ReduceByKey() directly.
+```
+  before:
+     key1, value1, key2, value2
+  operation:
+     ReduceBy(code, 1,3)
+  after:
+     key1, key2, value1, value2
+```
+The code is expected to be function(value1, value2).

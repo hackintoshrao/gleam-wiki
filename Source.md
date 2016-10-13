@@ -4,7 +4,7 @@ They are run as part of the driver program in a distributed environment, and can
 So they are usually written in Go.
 
 # Listen(network, address string)
-Listen() receives textual input via a socket.
+Listen() receives textual input via a socket. This can be used as input for streaming computation.
 
 # Source(f func(chan []byte))
 Source() receives a function that can generate data and send to the chan[]byte.

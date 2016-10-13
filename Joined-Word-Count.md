@@ -9,12 +9,12 @@ package main
 import (
 	"os"
 
-	"github.com/chrislusf/gleam/flow"
+	"github.com/chrislusf/gleam"
 )
 
 func main() {
 
-	f := flow.New().Script("lua", `
+	f := gleam.New().Script("lua", `
 	function splitter(line)
         return line:gmatch("%w+")
     end
