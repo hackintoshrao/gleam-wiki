@@ -14,6 +14,9 @@ It will try to sort on each partition locally, and then merge the sorted list in
 # Sort(indexes ...int)
 Same function as above. This can selectively choose to sort on which field, or fields. The fields ordering will stay the same.
 
+# SortBy(orderBys ...OrderBy)
+Same function as above. This can selectively choose to sort on which field, or fields, in any specific order. The fields ordering will stay the same.
+
 # Caveat
 
 If you use Pipe(), you can also use Pipe("sort"). However, this only works on one single partition. 

@@ -7,7 +7,7 @@
  * [[Partition() | Partition ]]
  * [[Map() ForEach() FlatMap() Filter() Select() | Map]]
  * [[Reduce() ReduceBy()| Reduce]]
- * [[Sort() | Sort]]
+ * [[Sort() SortBy() | Sort]]
  * [[Join() CoGroup() GroupBy()| Join-And-CoGroup]]
  * [[Output() Fprintf() | Output]]
 
