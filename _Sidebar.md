@@ -5,7 +5,7 @@
  * [[Source() Listen() TextFile() Channel() Strings() Bytes() Ints() | Source ]]
  * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
  * [[Partition() | Partition ]]
- * [[Map() ForEach() FlatMap() Filter() | Map]]
+ * [[Map() ForEach() FlatMap() Filter() Select() | Map]]
  * [[Reduce() ReduceBy()| Reduce]]
  * [[Sort() | Sort]]
  * [[Join() CoGroup() GroupBy()| Join-And-CoGroup]]

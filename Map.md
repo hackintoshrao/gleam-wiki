@@ -61,3 +61,16 @@ Filter() takes a row of fields, and return a boolean. If returning true, the row
       end
     `)
 ```
+
+# Select(indexes ...int)
+Select() takes a list of indexes, which is 1-based, to project the result.
+
+
+```
+  before:
+     value1, value2, value3, value4
+  operation:
+     Select(3,1)
+  after:
+     value3, value1
+```
