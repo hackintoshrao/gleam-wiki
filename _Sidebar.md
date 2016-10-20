@@ -1,6 +1,9 @@
 * Architecture
  * [[Why Gleam? | why gleam]]
 
+* Setup
+ * [[Installation | Installation]]
+
 * Gleam APIs
  * [[Source() Listen() TextFile() Channel() Strings() Bytes() Ints() | Source ]]
  * [[Pipe() and PipeArgs() | Pipe-And-PipeArgs]]
