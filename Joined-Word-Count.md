@@ -1,4 +1,4 @@
-This example uses Script() to register several named functions first. The "splitter" and "parseUniqDashC" are
+This example uses Define() to define several named functions first. The "splitter" and "parseUniqDashC" are
 declared. This piece of Lua code will be prepended when running the code. So it is a free format and you can put any logic there.
 
 "parseUniqDashC" returns a row of (word, count).
@@ -14,7 +14,7 @@ import (
 
 func main() {
 
-	f := gleam.New().Script("lua", `
+	f := gleam.New().Define(`
 	function splitter(line)
         return line:gmatch("%w+")
     end
