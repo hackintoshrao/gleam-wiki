@@ -1,5 +1,6 @@
 # Installation
 
+0) Install Go
 1) Install Luajit
 ```
   wget http://luajit.org/download/LuaJIT-2.0.4.tar.gz
