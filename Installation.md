@@ -2,6 +2,8 @@
 
 0) Install Go
 
+  https://golang.org/doc/install
+
 1) Install Luajit
 ```
   wget http://luajit.org/download/LuaJIT-2.0.4.tar.gz
