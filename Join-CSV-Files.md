@@ -1,8 +1,8 @@
 I have two CSV files. How to join them by one field?
 
-With Gleam, this is easy. The implementation is in the gleamSort() function. It has some extra logic of only list out rows with different scores. But basically, we can load each CSV file as a dataset, and Join() them.
+With Gleam, this is easy. The implementation is in the gleamSort() function. But basically, we can load each CSV file as a dataset, and Join() them.
 
-There is two other implementations using unix "sort" and "tr" tool. The "tr" is needed since the lines should be tab-separated values. I just write them to compare the performance.
+There is two other implementations using unix "sort" and "tr" tool. The "tr" is needed since the lines should be tab-separated values. I just wrote them to compare the performance.
 
 It turns out the gleamSort() is about 10% faster. This could due to the additional data transformation needed to fit unix pipe format.
 
