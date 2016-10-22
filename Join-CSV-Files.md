@@ -38,8 +38,8 @@ func main() {
 func gleamSort(aFile, bFile string) {
 
 	f := gleam.New()
-	a := f.Input(csv.New(aFile).SetHasHeader(false)).Select(1, 2, 3, 5)
-	b := f.Input(csv.New(bFile).SetHasHeader(false)).Select(1, 5)
+	a := f.Input(csv.New(aFile)).Select(1, 2, 3, 5)
+	b := f.Input(csv.New(bFile)).Select(1, 5)
 	a.Join(b).Filter(`
       function(val1, val2, val3, score1, score2)
        return score1~=score2
@@ -51,8 +51,8 @@ func gleamSort(aFile, bFile string) {
 func directSort(aFile, bFile string) {
 
 	f := gleam.New()
-	a := f.Input(csv.New(aFile).SetHasHeader(false)).Pipe("sort").Select(1, 2, 3, 5)
-	b := f.Input(csv.New(bFile).SetHasHeader(false)).Pipe("sort").Select(1, 5)
+	a := f.Input(csv.New(aFile)).Pipe("sort").Select(1, 2, 3, 5)
+	b := f.Input(csv.New(bFile)).Pipe("sort").Select(1, 5)
 
 	c := a.JoinPartitionedSorted(b, []int{1}, false, false)
 	c.Filter(`
