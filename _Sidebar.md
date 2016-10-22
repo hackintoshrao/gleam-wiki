@@ -19,4 +19,5 @@
 
 * Examples
  * [[Joined Word Count | Joined-Word-Count]]
+ * [[Join CSV Files | Join CSV Files]]
  * [[TF-IDF | TF-IDF]]
