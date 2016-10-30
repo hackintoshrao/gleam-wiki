@@ -16,7 +16,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/chrislusf/gleam"
+	"github.com/chrislusf/gleam/flow"
 	"github.com/chrislusf/gleam/source/csv"
 )
 
@@ -37,7 +37,7 @@ func main() {
 
 func gleamSort(aFile, bFile string) {
 
-	f := gleam.New()
+	f := flow.New()
 	a := f.Input(csv.New(aFile)).Select(1, 2, 3, 5)
 	b := f.Input(csv.New(bFile)).Select(1, 5)
 	a.Join(b).Filter(`
@@ -50,7 +50,7 @@ func gleamSort(aFile, bFile string) {
 
 func directSort(aFile, bFile string) {
 
-	f := gleam.New()
+	f := flow.New()
 	a := f.Input(csv.New(aFile)).Pipe("sort").Select(1, 2, 3, 5)
 	b := f.Input(csv.New(bFile)).Pipe("sort").Select(1, 5)
 
@@ -65,7 +65,7 @@ func directSort(aFile, bFile string) {
 
 func unixSort(aFile, bFile string) {
 
-	f := gleam.New()
+	f := flow.New()
 	a := f.Strings([]string{aFile}).PipeAsArgs("sort $1").Pipe(`tr "," "\t"`).Select(1, 2, 3, 5)
 	b := f.Strings([]string{bFile}).PipeAsArgs("sort $1").Pipe(`tr "," "\t"`).Select(1, 5)
 
