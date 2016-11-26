@@ -3,6 +3,7 @@
 
 * Setup
  * [[Installation | Installation]]
+ * [[Gleam Cluster Setup | Gleam Cluster Setup]]
 
 * Gleam APIs
  * [[Source() Listen() TextFile() Channel() Strings() Bytes() Ints() | Source ]]
